@@ -28,9 +28,6 @@ conn = {
     "schema": snowflake_schema
 }
 
-
-
-
 # Create a Snowflake connection
 connection = snowflake.connector.connect(**conn)
 
