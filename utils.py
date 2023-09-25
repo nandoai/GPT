@@ -5,17 +5,15 @@ import streamlit as st
 from config import *
 import snowflake.connector
 
-
-
 # Define Snowflake connection parameters
 
 conn = {
-    "user"  : snowflake_user,
-    "password": snowflake_password,
-    "account": snowflake_account,
-    "warehouse": snowflake_warehouse,
-    "database": snowflake_database,
-    "schema": snowflake_schema
+    "user"  : "SNOWGPT",
+    "password": "SnowGPT@202308",
+    "account": "anblicksorg_aws.us-east-1",
+    "warehouse": "SNOWGPT_WH",
+    "database": "SNOWGPT_DB",
+    "schema": "STG"
 }
 
 # Create a Snowflake connection
