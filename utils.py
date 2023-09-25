@@ -30,7 +30,7 @@ conn = {
 # Create a Snowflake connection
 connection = snowflake.connector.connect(**conn)
 
-# openai.api_key = openai_api_key
+
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 pinecone.init(api_key=api_key, environment=environment)
