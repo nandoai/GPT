@@ -6,6 +6,15 @@ snowflake_database = "SNOWGPT_DB"
 snowflake_schema = "STG"
 stage_name = "snowgpt_s3_stage"
 
+conn = {
+    "user"  : snowflake_user,
+    "password": snowflake_password,
+    "account": snowflake_account,
+    "warehouse": snowflake_warehouse,
+    "database": snowflake_database,
+    "schema": snowflake_schema
+}
+
 query = "SELECT DISTINCT GET_PRESIGNED_URL(@snowgpt_s3_stage, METADATA$FILENAME) FROM @snowgpt_s3_stage"
 
 api_key="741d647c-da49-4048-9d88-3b56e9e8e7f3"     
