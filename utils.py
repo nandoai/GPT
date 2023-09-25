@@ -6,14 +6,14 @@ from config import *
 import snowflake.connector
 
 # Define Snowflake connection parameters
-conn = {
-    "user"  : snowflake_user,
-    "password": snowflake_password,
-    "account": snowflake_account,
-    "warehouse": snowflake_warehouse,
-    "database": snowflake_database,
-    "schema": snowflake_schema
-}
+# conn = {
+#     "user"  : snowflake_user,
+#     "password": snowflake_password,
+#     "account": snowflake_account,
+#     "warehouse": snowflake_warehouse,
+#     "database": snowflake_database,
+#     "schema": snowflake_schema
+# }
 
 # Create a Snowflake connection
 connection = snowflake.connector.connect(**conn)
