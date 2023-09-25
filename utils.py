@@ -4,8 +4,21 @@ import openai
 import streamlit as st
 from config import *
 import snowflake.connector
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+sf_user = os.getenv("snowflake_user")
+sf_password = os.getenv("snowflake_password")
+sf_account = os.getenv("snowflake_account")
+sf_warehouse = os.getenv("snowflake_warehouse")
+sf_database = os.getenv("snowflake_database")
+sf_schema = os.getenv("snowflake_schema")
+sf_stage_name = os.getenv("stage_name")
 
 # Define Snowflake connection parameters
+<<<<<<< HEAD
 # conn = {
 #     "user"  : snowflake_user,
 #     "password": snowflake_password,
@@ -14,6 +27,16 @@ import snowflake.connector
 #     "database": snowflake_database,
 #     "schema": snowflake_schema
 # }
+=======
+conn = {
+    "user"  : sf_user,
+    "password": sf_password,
+    "account": sf_account,
+    "warehouse": sf_warehouse,
+    "database": sf_database,
+    "schema": sf_schema
+}
+>>>>>>> ff9f9d79a8805ddcdb5c5fe36e9b1e4de162953e
 
 # Create a Snowflake connection
 connection = snowflake.connector.connect(**conn)
@@ -78,8 +101,4 @@ def manage_query_history(index=None):
 
     cursor.close()
     return history
-
-  
-
-
 
