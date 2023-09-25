@@ -4,27 +4,15 @@ import openai
 import streamlit as st
 from config import *
 import snowflake.connector
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-sf_user = os.getenv("snowflake_user")
-sf_password = os.getenv("snowflake_password")
-sf_account = os.getenv("snowflake_account")
-sf_warehouse = os.getenv("snowflake_warehouse")
-sf_database = os.getenv("snowflake_database")
-sf_schema = os.getenv("snowflake_schema")
-sf_stage_name = os.getenv("stage_name")
 
 # Define Snowflake connection parameters
 conn = {
-    "user"  : sf_user,
-    "password": sf_password,
-    "account": sf_account,
-    "warehouse": sf_warehouse,
-    "database": sf_database,
-    "schema": sf_schema
+    "user"  : snowflake_user,
+    "password": snowflake_password,
+    "account": snowflake_account,
+    "warehouse": snowflake_warehouse,
+    "database": snowflake_database,
+    "schema": snowflake_schema
 }
 
 # Create a Snowflake connection
