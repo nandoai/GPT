@@ -105,7 +105,7 @@ if is_valid_api_key(openai_api_key):
                     res.write(st.session_state['responses'][i],key=str(i))
                     # message(st.session_state['responses'][i],key=str(i))
                     if i < len(st.session_state['requests']):
-                        req = st.chat_message("🧑")
+                        req = st.chat_message('user',avatar='https://stsnowgptimg.blob.core.windows.net/snowgptimage/user.png')
                         req.write(st.session_state['requests'][i],is_user=True,key=str(i)+ '_user')
                         # st.snow()
                         # message(st.session_state["requests"][i], is_user=True,key=str(i)+ '_user')
