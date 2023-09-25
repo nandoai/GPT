@@ -18,25 +18,18 @@ sf_schema = os.getenv("snowflake_schema")
 sf_stage_name = os.getenv("stage_name")
 
 # Define Snowflake connection parameters
-<<<<<<< HEAD
-# conn = {
-#     "user"  : snowflake_user,
-#     "password": snowflake_password,
-#     "account": snowflake_account,
-#     "warehouse": snowflake_warehouse,
-#     "database": snowflake_database,
-#     "schema": snowflake_schema
-# }
-=======
+
 conn = {
-    "user"  : sf_user,
-    "password": sf_password,
-    "account": sf_account,
-    "warehouse": sf_warehouse,
-    "database": sf_database,
-    "schema": sf_schema
+    "user"  : snowflake_user,
+    "password": snowflake_password,
+    "account": snowflake_account,
+    "warehouse": snowflake_warehouse,
+    "database": snowflake_database,
+    "schema": snowflake_schema
 }
->>>>>>> ff9f9d79a8805ddcdb5c5fe36e9b1e4de162953e
+
+
+
 
 # Create a Snowflake connection
 connection = snowflake.connector.connect(**conn)
