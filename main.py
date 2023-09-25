@@ -101,7 +101,7 @@ if is_valid_api_key(openai_api_key):
     with response_container:
             if st.session_state['responses']:
                 for i in range(len(st.session_state['responses'])):
-                    res = st.chat_message("❄️")
+                    res = st.chat_message('assistant',avatar='https://stsnowgptimg.blob.core.windows.net/snowgptimage/snowflakeimg.png')
                     res.write(st.session_state['responses'][i],key=str(i))
                     # message(st.session_state['responses'][i],key=str(i))
                     if i < len(st.session_state['requests']):
