@@ -7,17 +7,27 @@ import snowflake.connector
 
 # Define Snowflake connection parameters
 
-conn = {
-    "user"  : "SNOWGPT",
-    "password": "SnowGPT@202308",
-    "account": "anblicksorg_aws.us-east-1",
-    "warehouse": "SNOWGPT_WH",
-    "database": "SNOWGPT_DB",
-    "schema": "STG"
-}
+# conn = {
+#     "user"  : "SNOWGPT",
+#     "password": "SnowGPT@202308",
+#     "account": "anblicksorg_aws.us-east-1",
+#     "warehouse": "SNOWGPT_WH",
+#     "database": "SNOWGPT_DB",
+#     "schema": "STG"
+# }
 
 # Create a Snowflake connection
-connection = snowflake.connector.connect(**conn)
+# connection = snowflake.connector.connect(**conn)
+
+# Connect to Snowflake
+connection = snowflake.connector.connect(
+    user='SNOWGPT',        
+    password='SnowGPT@202308',
+    account='anblicksorg_aws.us-east-1',
+    warehouse='SNOWGPT_WH',
+    database='SNOWGPT_DB',
+    schema='STG'
+)
 
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
