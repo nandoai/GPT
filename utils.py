@@ -19,7 +19,7 @@ import snowflake.connector
 # Create a Snowflake connection
 # connection = snowflake.connector.connect(**conn)
 
-connection = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+connection = snowflake.connector.connect(**st.secrets["snowflake"])
 
 # Connect to Snowflake
 # connection = snowflake.connector.connect(
