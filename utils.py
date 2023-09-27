@@ -19,17 +19,17 @@ import snowflake.connector
 # Create a Snowflake connection
 # connection = snowflake.connector.connect(**conn)
 
-connection = snowflake.connector.connect(**st.secrets["snowflake"])
+# connection = snowflake.connector.connect(**st.secrets["snowflake"])
 
 # Connect to Snowflake
-# connection = snowflake.connector.connect(
-#     user='SNOWGPT',        
-#     password='SnowGPT@202308',
-#     account='anblicksorg_aws.us-east-1',
-#     warehouse='SNOWGPT_WH',
-#     database='SNOWGPT_DB',
-#     schema='STG'
-# )
+connection = snowflake.connector.connect(
+    user='SNOWGPT',        
+    password='SnowGPT@202308',
+    account='anblicksorg_aws.us-east-1',
+    warehouse='SNOWGPT_WH',
+    database='SNOWGPT_DB',
+    schema='STG'
+)
 
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
