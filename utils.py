@@ -21,14 +21,21 @@ import snowflake.connector
 
 # connection = snowflake.connector.connect(**st.secrets["snowflake"])
 
+sf_user=st.secrets["user"]        
+sf_password=st.secrets["password"]
+sf_account=st.secrets["account"]
+sf_warehouse=st.secrets["warehouse"]
+sf_database=st.secrets["database"]
+sf_schema=st.secrets["schema"]
+
 # Connect to Snowflake
 connection = snowflake.connector.connect(
-    user='SNOWGPT',        
-    password='SnowGPT@202308',
-    account='anblicksorg_aws.us-east-1',
-    warehouse='SNOWGPT_WH',
-    database='SNOWGPT_DB',
-    schema='STG'
+    user=sf_user,        
+    password=sf_password,
+    account=sf_account,
+    warehouse=sf_warehouse,
+    database=sf_database,
+    schema=sf_schema
 )
 
 
