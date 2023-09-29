@@ -19,24 +19,24 @@ import snowflake.connector
 # # Create a Snowflake connection
 # connection = snowflake.connector.connect(**conn)
 
-# connection = snowflake.connector.connect(**st.secrets["snowflake"])
+connection = snowflake.connector.connect(**st.secrets["snowflake"])
 
-sf_user=st.secrets["user"]        
-sf_password=st.secrets["password"]
-sf_account=st.secrets["account"]
-sf_warehouse=st.secrets["warehouse"]
-sf_database=st.secrets["database"]
-sf_schema=st.secrets["schema"]
+# sf_user=st.secrets["user"]        
+# sf_password=st.secrets["password"]
+# sf_account=st.secrets["account"]
+# sf_warehouse=st.secrets["warehouse"]
+# sf_database=st.secrets["database"]
+# sf_schema=st.secrets["schema"]
 
-# Connect to Snowflake
-connection = snowflake.connector.connect(
-    user=sf_user,        
-    password=sf_password,
-    account=sf_account,
-    warehouse=sf_warehouse,
-    database=sf_database,
-    schema=sf_schema
-)
+# # Connect to Snowflake
+# connection = snowflake.connector.connect(
+#     user=sf_user,        
+#     password=sf_password,
+#     account=sf_account,
+#     warehouse=sf_warehouse,
+#     database=sf_database,
+#     schema=sf_schema
+# )
 
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
